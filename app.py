@@ -26,7 +26,7 @@ def test():
 # endpoint from linebot
 @app.route("/callback", methods=['POST'])
 def callback():
-      # get X-Line-Signature header value
+  # get X-Line-Signature header value
   signature = request.headers['X-Line-Signature']
 
   # get request body as text
@@ -45,8 +45,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
   messageText = event.message.text.split("\n")
-  # # print(messageText)
-  # replyText = "test"
   user = session.query(User).\
     filter(User.line_user_id == event.source.user_id).\
     first()

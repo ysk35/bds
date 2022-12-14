@@ -15,5 +15,5 @@ class User(Base):
   student_number= Column('student_number', String(200))
 
 if __name__ == "__main__":
-  Base.metadata.drop_all(ENGINE)
+  # Base.metadata.drop_all(ENGINE)
   Base.metadata.create_all(bind=ENGINE)
