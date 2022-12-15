@@ -9,6 +9,7 @@ from AttendanceModel import Attendance
 from setting import session
 import datetime
 
+
 # generate instance
 app = Flask(__name__)
 
